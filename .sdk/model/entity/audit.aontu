@@ -1,0 +1,140 @@
+# Entity: audit
+
+main: kit: entity: audit: {
+
+  alias: field: {}
+
+  fields: {
+    actor_id: {
+      h: "Actor Id"
+      n: "actor_id"
+      r: true
+      t: "`$STRING`"
+    }
+    actor_type: {
+      h: "Actor Type"
+      n: "actor_type"
+      r: true
+      t: "`$STRING`"
+    }
+    case_id: {
+      h: "Case Id"
+      n: "case_id"
+      r: true
+      t: "`$STRING`"
+    }
+    correlation_id: {
+      h: "Correlation Id"
+      n: "correlation_id"
+      r: true
+      t: "`$STRING`"
+    }
+    created_at: {
+      h: "Created At"
+      n: "created_at"
+      r: true
+      t: "`$STRING`"
+    }
+    event_type: {
+      h: "Event Type"
+      n: "event_type"
+      r: true
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$STRING`"
+    }
+    new_state_json: {
+      h: "New State Json"
+      n: "new_state_json"
+      r: true
+      t: "`$OBJECT`"
+    }
+    prior_state_json: {
+      h: "Prior State Json"
+      n: "prior_state_json"
+      r: true
+      t: "`$OBJECT`"
+    }
+    summary: {
+      h: "Summary"
+      n: "summary"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "audit"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /api/v1/audit"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "case_id"
+                or: "case_id"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "event_type"
+                or: "event_type"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                ex: 100
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/v1/audit"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "audit"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

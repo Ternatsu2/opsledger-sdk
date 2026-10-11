@@ -1,0 +1,27 @@
+{
+  "existing": {
+    "system": {
+      "SYSTEM00": {
+        "id": "SYSTEM00"
+      },
+      "SYSTEM01": {
+        "id": "SYSTEM01"
+      },
+      "SYSTEM02": {
+        "id": "SYSTEM02"
+      }
+    }
+  },
+  "new": {
+    "system": {
+      "system_ref01": {}
+    }
+  },
+  "requests": {
+    "GET /api/v1/system": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

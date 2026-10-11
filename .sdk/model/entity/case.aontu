@@ -1,0 +1,304 @@
+# Entity: case
+
+main: kit: entity: case: {
+
+  alias: field: {}
+
+  fields: {
+    agent_runs: {
+      h: "Agent Runs"
+      n: "agent_runs"
+      r: true
+      t: "`$ARRAY`"
+    }
+    annual_revenue: {
+      h: "Annual Revenue"
+      n: "annual_revenue"
+      r: true
+      t: "`$STRING`"
+    }
+    assigned_reviewer_id: {
+      h: "Assigned Reviewer Id"
+      n: "assigned_reviewer_id"
+      r: true
+      t: "`$STRING`"
+    }
+    audit_events: {
+      h: "Audit Events"
+      n: "audit_events"
+      r: true
+      t: "`$ARRAY`"
+    }
+    completeness_breakdown: {
+      h: "Completeness Breakdown"
+      n: "completeness_breakdown"
+      r: true
+      t: "`$ARRAY`"
+    }
+    completeness_score: {
+      h: "Completeness Score"
+      n: "completeness_score"
+      r: true
+      t: "`$INTEGER`"
+    }
+    contact_email: {
+      fo: "email"
+      h: "Contact Email"
+      n: "contact_email"
+      r: true
+      t: "`$STRING`"
+    }
+    contact_name: {
+      h: "Contact Name"
+      n: "contact_name"
+      r: true
+      t: "`$STRING`"
+    }
+    created_at: {
+      h: "Created At"
+      n: "created_at"
+      r: true
+      t: "`$STRING`"
+    }
+    currency: {
+      h: "Currency"
+      n: "currency"
+      r: true
+      t: "`$STRING`"
+    }
+    documents: {
+      h: "Documents"
+      n: "documents"
+      r: true
+      t: "`$ARRAY`"
+    }
+    extracted_fields: {
+      h: "Extracted Fields"
+      n: "extracted_fields"
+      r: true
+      t: "`$ARRAY`"
+    }
+    findings: {
+      h: "Findings"
+      n: "findings"
+      r: true
+      t: "`$ARRAY`"
+    }
+    funding_purpose: {
+      h: "Funding Purpose"
+      n: "funding_purpose"
+      r: true
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$STRING`"
+    }
+    industry: {
+      h: "Industry"
+      n: "industry"
+      r: true
+      t: "`$STRING`"
+    }
+    issue_codes: {
+      h: "Issue Codes"
+      n: "issue_codes"
+      r: true
+      t: "`$ARRAY`"
+    }
+    jurisdiction: {
+      h: "Jurisdiction"
+      n: "jurisdiction"
+      r: true
+      t: "`$STRING`"
+    }
+    last_action: {
+      h: "Last Action"
+      n: "last_action"
+      r: true
+      t: "`$ANY`"
+    }
+    legal_business_name: {
+      h: "Legal Business Name"
+      n: "legal_business_name"
+      r: true
+      t: "`$STRING`"
+    }
+    open_finding_count: {
+      h: "Open Finding Count"
+      n: "open_finding_count"
+      r: true
+      t: "`$INTEGER`"
+    }
+    reference: {
+      h: "Reference"
+      n: "reference"
+      r: true
+      t: "`$STRING`"
+    }
+    registration_number: {
+      h: "Registration Number"
+      n: "registration_number"
+      r: true
+      t: "`$STRING`"
+    }
+    requested_amount: {
+      h: "Requested Amount"
+      n: "requested_amount"
+      r: true
+      t: "`$STRING`"
+    }
+    review_actions: {
+      h: "Review Actions"
+      n: "review_actions"
+      r: true
+      t: "`$ARRAY`"
+    }
+    stage: {
+      h: "Stage"
+      n: "stage"
+      r: true
+      t: "`$STRING`"
+    }
+    trading_name: {
+      h: "Trading Name"
+      n: "trading_name"
+      r: true
+      t: "`$ANY`"
+    }
+    updated_at: {
+      h: "Updated At"
+      n: "updated_at"
+      r: true
+      t: "`$STRING`"
+    }
+    version: {
+      h: "Version"
+      n: "version"
+      r: true
+      t: "`$INTEGER`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "case"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /api/v1/cases"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "q"
+                or: "q"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "stage"
+                or: "stage"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/v1/cases"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "cases"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/v1/cases/{case_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "case_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/v1/cases/{case_id}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              case_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "cases"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

@@ -1,0 +1,1350 @@
+{
+  "NAME": "OPSLEDGER",
+  "Name": "Opsledger",
+  "def": "openapi.readonly.json",
+  "main": {
+    "api": {
+      "entity": {},
+      "guide": {}
+    },
+    "custom": {
+      "plurals": {}
+    },
+    "def": {
+      "desc": ""
+    },
+    "kit": {
+      "author": {
+        "name": "Terry Benjamin Jr",
+        "url": "https://github.com/Ternatsu2"
+      },
+      "config": {
+        "docs_order": [
+          "ts",
+          "py",
+          "php",
+          "go",
+          "rb",
+          "lua"
+        ],
+        "headers": {
+          "content-type": "application/json"
+        },
+        "repr": "auto"
+      },
+      "contributor": {},
+      "doc": {
+        "active": true,
+        "assets": {
+          "path": ".sdk/doc/assets"
+        },
+        "brand": {
+          "label": "",
+          "notice": "",
+          "shortNotice": "",
+          "url": ""
+        },
+        "ci": {
+          "active": true,
+          "branch": "main"
+        },
+        "content": {
+          "path": ".sdk/doc/content"
+        },
+        "edition": {
+          "github-pages": {
+            "active": false,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "github-pages",
+            "name": "github-pages",
+            "origname": "",
+            "output": {
+              "path": "docs"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          },
+          "summary": {
+            "active": true,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "summary",
+            "name": "summary",
+            "origname": "",
+            "output": {
+              "path": "SUMMARY.md"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          }
+        },
+        "qa": {
+          "vocabulary": []
+        },
+        "style": {
+          "color": {
+            "accent": "#00c6d8",
+            "background": "#f5f5f9",
+            "darkBackground": "#0f1117",
+            "darkText": "#e6edf3",
+            "primary": "#e70042",
+            "text": "#0a0a0a"
+          },
+          "font": "Nunito, system-ui, sans-serif",
+          "fontFile": "",
+          "headingFont": "Nunito, system-ui, sans-serif",
+          "headingFontFile": "",
+          "logo": "",
+          "mode": "light",
+          "mono": "ui-monospace, monospace",
+          "monoFile": ""
+        },
+        "target": {}
+      },
+      "entity": {
+        "audit": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "actor_id": {
+              "a": true,
+              "h": "Actor Id",
+              "n": "actor_id",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "actor_type": {
+              "a": true,
+              "h": "Actor Type",
+              "n": "actor_type",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "case_id": {
+              "a": true,
+              "h": "Case Id",
+              "n": "case_id",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "correlation_id": {
+              "a": true,
+              "h": "Correlation Id",
+              "n": "correlation_id",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "created_at": {
+              "a": true,
+              "h": "Created At",
+              "n": "created_at",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "event_type": {
+              "a": true,
+              "h": "Event Type",
+              "n": "event_type",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "new_state_json": {
+              "a": true,
+              "h": "New State Json",
+              "n": "new_state_json",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "prior_state_json": {
+              "a": true,
+              "h": "Prior State Json",
+              "n": "prior_state_json",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "summary": {
+              "a": true,
+              "h": "Summary",
+              "n": "summary",
+              "r": true,
+              "t": "`$STRING`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "audit",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /api/v1/audit",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "case_id",
+                        "or": "case_id",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "event_type",
+                        "or": "event_type",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 100,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/v1/audit",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "v1"
+                    },
+                    {
+                      "lit": "audit"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "case": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "agent_runs": {
+              "a": true,
+              "h": "Agent Runs",
+              "n": "agent_runs",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "annual_revenue": {
+              "a": true,
+              "h": "Annual Revenue",
+              "n": "annual_revenue",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "assigned_reviewer_id": {
+              "a": true,
+              "h": "Assigned Reviewer Id",
+              "n": "assigned_reviewer_id",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "audit_events": {
+              "a": true,
+              "h": "Audit Events",
+              "n": "audit_events",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "completeness_breakdown": {
+              "a": true,
+              "h": "Completeness Breakdown",
+              "n": "completeness_breakdown",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "completeness_score": {
+              "a": true,
+              "h": "Completeness Score",
+              "n": "completeness_score",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "contact_email": {
+              "a": true,
+              "fo": "email",
+              "h": "Contact Email",
+              "n": "contact_email",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "contact_name": {
+              "a": true,
+              "h": "Contact Name",
+              "n": "contact_name",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "created_at": {
+              "a": true,
+              "h": "Created At",
+              "n": "created_at",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "currency": {
+              "a": true,
+              "h": "Currency",
+              "n": "currency",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "documents": {
+              "a": true,
+              "h": "Documents",
+              "n": "documents",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "extracted_fields": {
+              "a": true,
+              "h": "Extracted Fields",
+              "n": "extracted_fields",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "findings": {
+              "a": true,
+              "h": "Findings",
+              "n": "findings",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "funding_purpose": {
+              "a": true,
+              "h": "Funding Purpose",
+              "n": "funding_purpose",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "industry": {
+              "a": true,
+              "h": "Industry",
+              "n": "industry",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "issue_codes": {
+              "a": true,
+              "h": "Issue Codes",
+              "n": "issue_codes",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "jurisdiction": {
+              "a": true,
+              "h": "Jurisdiction",
+              "n": "jurisdiction",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "last_action": {
+              "a": true,
+              "h": "Last Action",
+              "n": "last_action",
+              "r": true,
+              "t": "`$ANY`"
+            },
+            "legal_business_name": {
+              "a": true,
+              "h": "Legal Business Name",
+              "n": "legal_business_name",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "open_finding_count": {
+              "a": true,
+              "h": "Open Finding Count",
+              "n": "open_finding_count",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "reference": {
+              "a": true,
+              "h": "Reference",
+              "n": "reference",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "registration_number": {
+              "a": true,
+              "h": "Registration Number",
+              "n": "registration_number",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "requested_amount": {
+              "a": true,
+              "h": "Requested Amount",
+              "n": "requested_amount",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "review_actions": {
+              "a": true,
+              "h": "Review Actions",
+              "n": "review_actions",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "stage": {
+              "a": true,
+              "h": "Stage",
+              "n": "stage",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "trading_name": {
+              "a": true,
+              "h": "Trading Name",
+              "n": "trading_name",
+              "r": true,
+              "t": "`$ANY`"
+            },
+            "updated_at": {
+              "a": true,
+              "h": "Updated At",
+              "n": "updated_at",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "version": {
+              "a": true,
+              "h": "Version",
+              "n": "version",
+              "r": true,
+              "t": "`$INTEGER`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "case",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /api/v1/cases",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "q",
+                        "or": "q",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "stage",
+                        "or": "stage",
+                        "r": false,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/v1/cases",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "v1"
+                    },
+                    {
+                      "lit": "cases"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /api/v1/cases/{case_id}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "id",
+                        "or": "case_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/v1/cases/{case_id}",
+                  "q": {
+                    "exist": [
+                      "id"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "case_id": "id"
+                    }
+                  },
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "v1"
+                    },
+                    {
+                      "lit": "cases"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "dashboard": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "approved": {
+              "a": true,
+              "h": "Approved",
+              "n": "approved",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "average_processing_seconds": {
+              "a": true,
+              "h": "Average Processing Seconds",
+              "n": "average_processing_seconds",
+              "r": true,
+              "t": "`$ANY`"
+            },
+            "manual_investigation": {
+              "a": true,
+              "h": "Manual Investigation",
+              "n": "manual_investigation",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "needs_information": {
+              "a": true,
+              "h": "Needs Information",
+              "n": "needs_information",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "open_cases": {
+              "a": true,
+              "h": "Open Cases",
+              "n": "open_cases",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "ready_for_review": {
+              "a": true,
+              "h": "Ready For Review",
+              "n": "ready_for_review",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "recent_activity": {
+              "a": true,
+              "h": "Recent Activity",
+              "n": "recent_activity",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "top_failure_reasons": {
+              "a": true,
+              "h": "Top Failure Reasons",
+              "n": "top_failure_reasons",
+              "r": true,
+              "t": "`$ARRAY`"
+            }
+          },
+          "name": "dashboard",
+          "op": {
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /api/v1/dashboard",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/v1/dashboard",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "v1"
+                    },
+                    {
+                      "lit": "dashboard"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "health": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {},
+          "name": "health",
+          "op": {
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /health",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/health",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "health"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "readiness": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {},
+          "name": "readiness",
+          "op": {
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /ready",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/ready",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "ready"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "system": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {},
+          "name": "system",
+          "op": {
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /api/v1/system",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/v1/system",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "v1"
+                    },
+                    {
+                      "lit": "system"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        }
+      },
+      "feature": {
+        "test": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "config": {
+            "options": {
+              "active": false
+            },
+            "optspec": {
+              "entity": "`$MAP`",
+              "net": "`$MAP`"
+            },
+            "strict": false
+          },
+          "description": "In-memory mock transport for testing without a live server",
+          "hook": {
+            "GetData": {
+              "active": true,
+              "await": false
+            },
+            "GetMatch": {
+              "active": true,
+              "await": false
+            },
+            "PostConstruct": {
+              "active": true,
+              "await": false
+            },
+            "PostConstructEntity": {
+              "active": true,
+              "await": false
+            },
+            "PostOperation": {
+              "active": false,
+              "await": false
+            },
+            "PrePoint": {
+              "active": true,
+              "await": false
+            },
+            "PreRequest": {
+              "active": true,
+              "await": false
+            },
+            "PreResponse": {
+              "active": true,
+              "await": false
+            },
+            "PreResult": {
+              "active": true,
+              "await": false
+            },
+            "PreSpec": {
+              "active": true,
+              "await": false
+            },
+            "PreTarget": {
+              "active": false,
+              "await": false
+            },
+            "SetData": {
+              "active": true,
+              "await": false
+            },
+            "SetMatch": {
+              "active": true,
+              "await": false
+            }
+          },
+          "name": "test",
+          "needs": {},
+          "origname": "",
+          "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
+          "target": {
+            "ts": {
+              "deps": {}
+            }
+          },
+          "title": "Test transport",
+          "transport": "base",
+          "version": "0.0.1"
+        }
+      },
+      "flow": {
+        "BasicAuditFlow": {
+          "active": true,
+          "entity": "audit",
+          "key$": "BasicAuditFlow",
+          "kind": "basic",
+          "name": "BasicAuditFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "audit_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicCaseFlow": {
+          "active": true,
+          "entity": "case",
+          "key$": "BasicCaseFlow",
+          "kind": "basic",
+          "name": "BasicCaseFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "case_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "case_ref01",
+                "srcdatavar": "case_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "case01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-case_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicDashboardFlow": {
+          "active": true,
+          "entity": "dashboard",
+          "key$": "BasicDashboardFlow",
+          "kind": "basic",
+          "name": "BasicDashboardFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "dashboard_ref01",
+                "srcdatavar": "dashboard_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {},
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-dashboard_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicHealthFlow": {
+          "active": true,
+          "entity": "health",
+          "key$": "BasicHealthFlow",
+          "kind": "basic",
+          "name": "BasicHealthFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "health_ref01",
+                "srcdatavar": "health_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {},
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-health_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicReadinessFlow": {
+          "active": true,
+          "entity": "readiness",
+          "key$": "BasicReadinessFlow",
+          "kind": "basic",
+          "name": "BasicReadinessFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "readiness_ref01",
+                "srcdatavar": "readiness_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {},
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-readiness_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicSystemFlow": {
+          "active": true,
+          "entity": "system",
+          "key$": "BasicSystemFlow",
+          "kind": "basic",
+          "name": "BasicSystemFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "system_ref01",
+                "srcdatavar": "system_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {},
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-system_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "info": {
+        "auth": false,
+        "description": "Read-only SDK scope for the public OpsLedger synthetic-data demo. No decisions, uploads or mutations.",
+        "license": {
+          "name": "Apache-2.0",
+          "url": "https://github.com/Ternatsu2/opsledger-ai/blob/main/LICENSE"
+        },
+        "servers": [
+          {
+            "url": "https://opsledger-api-production.up.railway.app"
+          }
+        ],
+        "summary": "Read-only SDK scope for the public OpsLedger synthetic-data demo.",
+        "title": "OpsLedger AI API",
+        "version": "0.1.0",
+        "website": "https://opsledger-api-production.up.railway.app"
+      },
+      "option": {},
+      "optspec": {
+        "allow": {
+          "method": "GET,PUT,POST,PATCH,DELETE,OPTIONS",
+          "op": "create,update,patch,load,list,remove,command,direct,graphql"
+        },
+        "apikey": "",
+        "auth": {
+          "basic": false,
+          "in": "",
+          "name": "",
+          "prefix": ""
+        },
+        "base": "http://localhost:8000",
+        "clean": {
+          "active": true,
+          "hint": "0",
+          "keys": "key,secret,token,password,passwd,authorization,cookie,credential,signature",
+          "mask": "[redacted]",
+          "min": "4",
+          "values": ""
+        },
+        "entity": {
+          "`$CHILD`": {
+            "`$OPEN`": true,
+            "active": false,
+            "alias": {}
+          }
+        },
+        "extend": "`$ANY`",
+        "headers": {
+          "`$CHILD`": "`$STRING`"
+        },
+        "prefix": "",
+        "secret": "",
+        "server": {
+          "`$CHILD`": ""
+        },
+        "suffix": "",
+        "system": {
+          "fetch": "`$ANY`"
+        },
+        "test": {
+          "active": false,
+          "entity": {
+            "`$OPEN`": true
+          }
+        },
+        "utility": {}
+      },
+      "phase": {
+        "build": {
+          "active": true
+        },
+        "top": {
+          "active": true
+        }
+      },
+      "publisher": {
+        "name": "Terry Benjamin Jr",
+        "security": "https://github.com/Ternatsu2/opsledger-sdk/security",
+        "url": "https://github.com/Ternatsu2"
+      },
+      "repo": {
+        "host": "github.com",
+        "path": "Ternatsu2/opsledger-sdk"
+      },
+      "target": {
+        "ts": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {
+            "@types/node": {
+              "active": true,
+              "kind": "dev",
+              "version": "^25.6.0"
+            },
+            "typescript": {
+              "active": true,
+              "kind": "dev",
+              "version": "^5.9.3"
+            }
+          },
+          "ext": "ts",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "opsledger",
+            "package": "",
+            "path": ""
+          },
+          "name": "ts",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "npm",
+              "package": "@ternatsu2/opsledger-sdk",
+              "state": "pending",
+              "url": "https://registry.npmjs.org",
+              "vault": {
+                "alias": "npm",
+                "env": "",
+                "recipe": "npm"
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "superseded": [
+            "test/runner.ts",
+            "test/vendor/omni/compat.ts",
+            "src/feature/secrets/sekreto/Providers.ts",
+            "src/feature/secrets/sekreto/Sigv4.ts",
+            "src/feature/secrets/sekreto/provider/Registry.ts",
+            "src/feature/secrets/sekreto/provider/http.ts"
+          ],
+          "title": "TypeScript"
+        }
+      },
+      "test": {
+        "live": {
+          "app": false,
+          "base": "",
+          "strict": true
+        }
+      },
+      "text": {
+        "about_md": "This SDK covers seven read-only operations. It does not approve cases, upload documents or modify records. See EVALUATION.md for the build observations and test evidence. The API is a personal demo, not a client system.",
+        "docs_url": "",
+        "entity_desc": {},
+        "homepage": "",
+        "meta_source": "",
+        "summary": "A TypeScript client generated with Voxgig for the public OpsLedger synthetic-data demo.",
+        "tagline": "",
+        "title": "OpsLedger Read-Only SDK",
+        "website": "https://opsledger-web-production.up.railway.app"
+      }
+    }
+  },
+  "name": "opsledger",
+  "name-": "opsledger",
+  "name_": "opsledger",
+  "name__orig": "opsledger",
+  "origin": "voxgig-sdk"
+}

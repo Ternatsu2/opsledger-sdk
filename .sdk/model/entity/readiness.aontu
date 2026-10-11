@@ -1,0 +1,43 @@
+# Entity: readiness
+
+main: kit: entity: readiness: {
+
+  alias: field: {}
+
+  name: "readiness"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /ready"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/ready"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "ready"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+
+}

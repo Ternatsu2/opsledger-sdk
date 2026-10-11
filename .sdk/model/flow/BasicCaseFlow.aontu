@@ -1,0 +1,44 @@
+# BasicCaseFlow
+
+main: kit: flow: BasicCaseFlow:
+{
+  entity: "case",
+  kind: "basic",
+  name: "BasicCaseFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "case_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "case_ref01",
+        srcdatavar: "case_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "case01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-case_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicCaseFlow"
+}

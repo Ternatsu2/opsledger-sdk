@@ -1,0 +1,28 @@
+# BasicDashboardFlow
+
+main: kit: flow: BasicDashboardFlow:
+{
+  entity: "dashboard",
+  kind: "basic",
+  name: "BasicDashboardFlow",
+  step: [
+    {
+      i: {
+        ref: "dashboard_ref01",
+        srcdatavar: "dashboard_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-dashboard_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicDashboardFlow"
+}

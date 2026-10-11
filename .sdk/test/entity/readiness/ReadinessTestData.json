@@ -1,0 +1,27 @@
+{
+  "existing": {
+    "readiness": {
+      "READINESS00": {
+        "id": "READINESS00"
+      },
+      "READINESS01": {
+        "id": "READINESS01"
+      },
+      "READINESS02": {
+        "id": "READINESS02"
+      }
+    }
+  },
+  "new": {
+    "readiness": {
+      "readiness_ref01": {}
+    }
+  },
+  "requests": {
+    "GET /ready": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

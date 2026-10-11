@@ -1,0 +1,60 @@
+{
+  "existing": {
+    "dashboard": {
+      "DASHBOARD00": {
+        "approved": 80,
+        "average_processing_seconds": "s51",
+        "manual_investigation": 82,
+        "needs_information": 83,
+        "open_cases": 84,
+        "ready_for_review": 85,
+        "recent_activity": [],
+        "top_failure_reasons": [],
+        "id": "DASHBOARD00"
+      },
+      "DASHBOARD01": {
+        "approved": 160,
+        "average_processing_seconds": "sa1",
+        "manual_investigation": 162,
+        "needs_information": 163,
+        "open_cases": 164,
+        "ready_for_review": 165,
+        "recent_activity": [],
+        "top_failure_reasons": [],
+        "id": "DASHBOARD01"
+      },
+      "DASHBOARD02": {
+        "approved": 240,
+        "average_processing_seconds": "sf1",
+        "manual_investigation": 242,
+        "needs_information": 243,
+        "open_cases": 244,
+        "ready_for_review": 245,
+        "recent_activity": [],
+        "top_failure_reasons": [],
+        "id": "DASHBOARD02"
+      }
+    }
+  },
+  "new": {
+    "dashboard": {
+      "dashboard_ref01": {
+        "approved": 320,
+        "average_processing_seconds": "s141",
+        "manual_investigation": 322,
+        "needs_information": 323,
+        "open_cases": 324,
+        "ready_for_review": 325,
+        "recent_activity": [],
+        "top_failure_reasons": []
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/dashboard": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

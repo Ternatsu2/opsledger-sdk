@@ -1,0 +1,20 @@
+# Guide
+
+@"@voxgig/apidef/model/guide.aontu"
+
+@"./base-guide.aontu"
+
+guide: entity: {
+  system: path: {
+    '/health': active: false
+    '/ready': active: false
+  }
+  health: path: '/health': op: load: method: GET
+  readiness: path: '/ready': op: load: method: GET
+  dashboard: path: '/api/v1/dashboard': op: {
+    list: active: false
+    load: method: GET
+  }
+}
+
+

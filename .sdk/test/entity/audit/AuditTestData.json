@@ -1,0 +1,64 @@
+{
+  "existing": {
+    "audit": {
+      "AUDIT00": {
+        "actor_id": "ACTOR01",
+        "actor_type": "s65",
+        "case_id": "CASE01",
+        "correlation_id": "CORRELATION01",
+        "created_at": "s68",
+        "event_type": "s69",
+        "id": "AUDIT00",
+        "new_state_json": {},
+        "prior_state_json": {},
+        "summary": "s6d"
+      },
+      "AUDIT01": {
+        "actor_id": "ACTOR01",
+        "actor_type": "sc9",
+        "case_id": "CASE01",
+        "correlation_id": "CORRELATION01",
+        "created_at": "scc",
+        "event_type": "scd",
+        "id": "AUDIT01",
+        "new_state_json": {},
+        "prior_state_json": {},
+        "summary": "sd1"
+      },
+      "AUDIT02": {
+        "actor_id": "ACTOR01",
+        "actor_type": "s12d",
+        "case_id": "CASE01",
+        "correlation_id": "CORRELATION01",
+        "created_at": "s130",
+        "event_type": "s131",
+        "id": "AUDIT02",
+        "new_state_json": {},
+        "prior_state_json": {},
+        "summary": "s135"
+      }
+    }
+  },
+  "new": {
+    "audit": {
+      "audit_ref01": {
+        "actor_id": "ACTOR01",
+        "actor_type": "s191",
+        "case_id": "CASE01",
+        "correlation_id": "CORRELATION01",
+        "created_at": "s194",
+        "event_type": "s195",
+        "new_state_json": {},
+        "prior_state_json": {},
+        "summary": "s199"
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/audit": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

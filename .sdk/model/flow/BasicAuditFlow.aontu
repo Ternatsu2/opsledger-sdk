@@ -1,0 +1,22 @@
+# BasicAuditFlow
+
+main: kit: flow: BasicAuditFlow:
+{
+  entity: "audit",
+  kind: "basic",
+  name: "BasicAuditFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "audit_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAuditFlow"
+}

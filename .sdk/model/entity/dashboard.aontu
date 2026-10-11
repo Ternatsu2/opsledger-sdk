@@ -1,0 +1,97 @@
+# Entity: dashboard
+
+main: kit: entity: dashboard: {
+
+  alias: field: {}
+
+  fields: {
+    approved: {
+      h: "Approved"
+      n: "approved"
+      r: true
+      t: "`$INTEGER`"
+    }
+    average_processing_seconds: {
+      h: "Average Processing Seconds"
+      n: "average_processing_seconds"
+      r: true
+      t: "`$ANY`"
+    }
+    manual_investigation: {
+      h: "Manual Investigation"
+      n: "manual_investigation"
+      r: true
+      t: "`$INTEGER`"
+    }
+    needs_information: {
+      h: "Needs Information"
+      n: "needs_information"
+      r: true
+      t: "`$INTEGER`"
+    }
+    open_cases: {
+      h: "Open Cases"
+      n: "open_cases"
+      r: true
+      t: "`$INTEGER`"
+    }
+    ready_for_review: {
+      h: "Ready For Review"
+      n: "ready_for_review"
+      r: true
+      t: "`$INTEGER`"
+    }
+    recent_activity: {
+      h: "Recent Activity"
+      n: "recent_activity"
+      r: true
+      t: "`$ARRAY`"
+    }
+    top_failure_reasons: {
+      h: "Top Failure Reasons"
+      n: "top_failure_reasons"
+      r: true
+      t: "`$ARRAY`"
+    }
+  }
+
+  name: "dashboard"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/v1/dashboard"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/api/v1/dashboard"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "dashboard"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

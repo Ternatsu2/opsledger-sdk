@@ -1,0 +1,25 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      auth: false
+      description: "Read-only SDK scope for the public OpsLedger synthetic-data demo. No decisions, uploads or mutations."
+      license: {
+        name: "Apache-2.0"
+        url: "https://github.com/Ternatsu2/opsledger-ai/blob/main/LICENSE"
+      }
+      servers: [
+        {
+          url: "https://opsledger-api-production.up.railway.app"
+        }
+      ]
+      summary: "Read-only SDK scope for the public OpsLedger synthetic-data demo."
+      title: "OpsLedger AI API"
+      version: "0.1.0"
+      website: "https://opsledger-api-production.up.railway.app"
+    }
+  }
+}
+
